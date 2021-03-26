@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class='main'>
+    
+        <div id='timer' class='timer'></div>
+
+        <div id='killList' class='killList'></div>
+         
+    </div>
+    
+</body>
+
+<script>
+   if ('alt' in window) {
+        alt.on('cef::killMsg:create', (data) => killMsg(data.player1, data.player2))
+        alt.on('cef::timer:push', (time) => timer(time));
+    }
+    // Вызываем сообщение об убийстве
+    function killMsg(player1, player2) {
+            let id = document.getElementById('killList');
+            if (id.children.length >= 5)  id.lastChild.remove();
+            let killMsg = document.createElement('div');
+            let msg1 = document.createElement('div');
+            let msg2 = document.createElement('div');
+            let scull = document.createElement('div');
+            killMsg.classList.add('killmsg', 'animate__animated', 'animate__fadeInRightBig');
+            msg1.innerHTML = player1; msg2.innerHTML = player2;
+            msg1.classList.add('killmsg_player');
+            msg2.classList.add('killmsg_player');
+            scull.classList.add('skull');
+            killMsg.appendChild(msg1); killMsg.appendChild(scull), killMsg.appendChild(msg2);
+            id.appendChild(killMsg)
+            setTimeout(() => {
+                killMsg.classList.add('killmsg', 'animate__animated', 'animate__fadeOutRightBig');
+                setTimeout(() => killMsg.remove(), 1500)
+            }, 5000)
+        }
+    // Таймер
+    function timer(time) {
+        let id = document.getElementById('timer');
+        id.innerHTML = time;
+    }
+
+</script>
+
+</html>

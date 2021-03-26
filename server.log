@@ -1,0 +1,17 @@
+[18:26:15] alt:V Server 2.20 (release)
+[18:26:15] Starting alt:V Server on 0.0.0.0:7788
+[18:26:15] Loading resource example
+[18:26:16] [96mThe resource has now started! PogChamp[39m
+[18:26:16] Loaded resource example
+[18:26:16] Required server permissions:
+[18:26:16] Optional server permissions:
+[18:26:16] Starting HTTP server on 0.0.0.0:7788
+[18:26:16] Main thread started (ThreadId: 20036)
+[18:26:16] Colshape thread started (ThreadId: 19924)
+[18:26:16] Console thread started (ThreadId: 16600)
+[18:26:17] Network thread started (ThreadId: 1444)
+[18:26:17] EntityStreamer thread started (ThreadId: 11108)
+[18:26:17] Server started
+[18:27:34] Stopping resource example
+[18:27:35] Stopped resource example
+[18:27:35] Server shutdown

@@ -1,0 +1,29 @@
+{
+    "name": "altv-deathmatch",
+    "version": "0.0.1",
+    "description": "deathmatch",
+    "main": "index.js",
+    "scripts": {
+        "update": "npm install && node ./install.js"
+    },
+    "author": "bazap",
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "chalk": "^4.0.0",
+        "download": "^7.1.0"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@altv/types-client": "^1.1.0",
+        "@altv/types-natives": "^1.2.2",
+        "@altv/types-server": "^1.2.0",
+        "@altv/types-webview": "^1.0.2",
+        "prettier": "^1.18.2"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "bracketSpacing": true
+    }
+}
